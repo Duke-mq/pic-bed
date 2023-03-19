@@ -6,7 +6,7 @@ export const getAllPathName = async () => {
     .get(apiUrl)
     .then((response) => {
       // 解析响应数据
-      const data = response.data;
+      const data = response.data as any[];
       // 提取文件名称
       const filenames = data.map((item) => item.name);
       return filenames;
